@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -5,20 +7,7 @@
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
+/* @keyframes logo-spin {
   from {
     transform: rotate(0deg);
   }
@@ -31,6 +20,22 @@
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
   }
+} */
+
+@media (max-width: 1024px) {
+  .result {
+    flex-direction: column;
+  }
+  .text {
+    margin-bottom: 8px;
+  }
+}
+
+@media (max-width: 767) {
+  .links {
+    display: flex;
+    flex-direction: row;
+  }
 }
 
 .card {
@@ -39,4 +44,69 @@
 
 .read-the-docs {
   color: #888;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.results {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.result {
+  display: flex;
+
+  justify-content: space-between;
+  /* border: 1px solid rgb(88, 87, 87); */
+  align-items: center;
+  width: 60vw;
+
+  margin-bottom: 20px;
+  border-radius: 6px;
+
+  word-wrap: break-word; /* Allows long words to be broken and wrap to the next line */
+  word-break: break-all; /* Ensures text breaks within words if necessary */
+  white-space: normal; /* Allows text to wrap normally */
+}
+
+.result .text {
+  flex: 1;
+}
+
+.result .links {
+  flex-shrink: 0;
+  margin-left: 10px; /* Adjust the spacing as needed */
+}
+
+.search {
+  word-wrap: break-word;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 2em;
+}
+.result .text {
+  flex: 1;
+}
+.search input {
+  border: none;
+  padding: 7px 7px;
+  margin: 5px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.search-bar {
+  /* border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgb(88, 87, 87); */
+  margin-top: 50px;
+  margin-bottom: 20px;
 }
